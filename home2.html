@@ -15,18 +15,72 @@
     <header>
         <div class="flex justify-between">
             <img src="menu (1).png" alt=" menu icon">
-            <div id=" formulaire">
-                <button>
-
-                    <img class="ml-40 h-10 mt-3" src="plus.png" alt="plus icon">
-                </button>
+            <div class=" h-[30px] w-full  relative">
+  <button onclick="document.getElementById('modal').classList.remove('hidden')"
+            class=" absolute right-5 text-white  font-bold py-2 px-4  mt-2  transition flex items-center hover:bg-teal-100">
+             <img src="plus.png" alt="">
+          </button>
+     <div id="modal"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 backdrop-blur-sm">
+        <div
+          class="bg-teal-100 dark:bg-gray-800 w-[80%] max-w-md p-6 rounded-lg shadow-2xl transform transition-all scale-100">
+          <h3 class="text-3xl fond-bold text-gray-700 dark:text-white mb-6 text-conter">
+            Add Destination
+          </h3>
+          <form id="Destination_page" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Titre</label>
+              <input type="text" id="Titre"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                placeholder="Entrez le Titre" required />
             </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Destination</label>
+              <input type="text" id="des"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                placeholder="Entrez la Destination" required />
+            </div>
+            <div >
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Note </label>
+              <input type="number" id="note" name="note" max="1" min="5" 
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                placeholder="Entrez la note" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Catégorie</label>
+              <input type="text" id="cat"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                placeholder="Entrez Catégorie" required />
+            </div>
+             <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image</label>
+              <input type="text" id="img"
+                class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                placeholder="URL" required />
+            </div>
+
+            <div class="flex justify-between mt-8 pt-4 border-t dark:border-gray-700">
+              <button type="button" onclick="document.getElementById('modal').classList.add('hidden')"
+                class="px-5 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg transition dark:bg-gray-600 dark:text-gray-200">
+                Annuler
+              </button>
+
+              <button type="submit"
+                class="px-5 py-2 bg-green-700 hover:bg-green-800 text-white font-bold rounded-lg shadow transition transform hover:scale-105">
+                Enregistrer
+              </button>
+            </div>
+          </form>
+
+</div>
+</div>
+</div>
             <img src="chercher.png" class="" alt="cherche icon">
         </div>
     </header>
-    <nav>
-        <a href="">home</a>
-    </nav>
+
     <h1 class=" pt-5 pl-5 font-meduim ">Blogger of the week</h1>
     <div class="flex flex-justify-around  gap-10 pt-5 pl-5 pr-5 md:flex md:justify-between ">
         <div class="w-24 h-24 rounded-full bg-green-500  "><img class="w-24 h-24 rounded-full" src="trip.jpg" alt="">
