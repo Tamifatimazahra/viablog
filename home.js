@@ -18,20 +18,26 @@
     let submit = document.getElementById('submit');
     let Annuler = document.getElementById('Annuler');
     let image = document.getElementById('img');
+    let btn_form = document.getElementById('modal')
 
     let tab = [];
-submit.onclick =function addDATA(){
- let newdest = {
-  titre_de_card : titre.value,
-  destination_de_card : destination.value,
-  note_de_card :note.value,
-  categorie_de_card :categorie.value,
-  image_de_card:image.value,
-}
-tab.push(newdest);
-afficherVoyage();
-clearData();
-}
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let newdest = {
+        titre : titre.value,
+        destination: destination.value,
+        note :note.value,
+        categorie :categorie.value,
+        image:image.value,
+    }
+
+    tab.push(newdest);
+    afficherVoyage();
+    clearData();
+    btn_form.classList.add('hidden');
+});
+
 
    
 
@@ -41,7 +47,7 @@ function afficherVoyage(){
     for (let i = 0 ; i< tab.length ; i++){
 
         array +=` <div class=" flex flex-col justify-center items-center  ">
-        <div class="w-80 h-40  flex  justify-center items-center rounded-t-lg lg:w-[100%]">  lg:w-[80%]><img
+        <div class="w-80 h-40  flex  justify-center items-center rounded-t-lg lg:w-[100%]"> <img
                     class="w-80 h-40 bg-green-500 flex  justify-center items-center rounded-t-lg lg:w-[100%] "
                     src=${tab[i].image} alt=""></a></div>
     </div>
@@ -73,7 +79,7 @@ function afficherVoyage(){
 `;
     }
   
-   document.getElementById('countainer') = array;
+   document.getElementById('countainer').innerHTML = array;
  
     
 }
