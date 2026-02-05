@@ -46,13 +46,15 @@ function afficherVoyage(){
  let array = '';
     for (let i = 0 ; i< tab.length ; i++){
 
-        array +=` <div class=" flex flex-col justify-center items-center  ">
-        <div class="w-80 h-40  flex  justify-center items-center rounded-t-lg lg:w-[100%]"> <img
-                    class="w-80 h-40 bg-green-500 flex  justify-center items-center rounded-t-lg lg:w-[100%] "
-                    src=${tab[i].image} alt=""></a></div>
+        array +=` 
+        <div class=" flex flex-col justify-center items-center  ">
+            <div class="w-80 h-40  flex  justify-center items-center rounded-t-lg lg:w-[52%]"> <img
+                class="w-80 h-40  flex  justify-center items-center rounded-t-lg lg:w-[52%]  "
+                src=${tab[i].image} alt=""></a>
+            </div>
     </div>
 
-    <div class="w-80 h-20 bg-stone-100 flex ml-9 rounded-b-lg justify-center items-center lg:flex lg:justify-between lg:items-center lg:m-auto lg:w-[80%]">
+    <div class="w-80 h-20 bg-stone-100 flex ml-9 rounded-b-lg justify-center items-center lg:flex lg:justify-between lg:items-center lg:m-auto    px-2">
         <div class=" flex   w-[90%] justify-between items-center lg:justify-between lg:gap-12">
 
             <div class="text-center lg:text-left ">
@@ -66,9 +68,7 @@ function afficherVoyage(){
                 <div class="gap-2 flex"><img class="w-4 h-4" src="time-and-date.png" alt="">
                     <p id ="time" class="text-xs">${tab[i].note}</p>
                 </div>
-                <div  id="oiel" class="gap-2 flex"><img class="w-4 h-4" src="oeil.png" alt="">
-                    <p class="text-xs"> </p>
-                </div>
+               
             </div>
 
 
